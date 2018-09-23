@@ -67,9 +67,11 @@ table tr:nth-child(even) {
     background-color: #3F9DA6;
 }
 
+/*
 table td:nth-of-type(1) {
     background-color: red;
 }
+*/
 
 table th {
     display: none;
