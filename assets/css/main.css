@@ -1,0 +1,248 @@
+/*
+ Purple Bliss
+ #0b8793
+ # 
+*/
+
+html {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+body {
+    margin: 0px;
+}
+
+header {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+}
+
+.container {
+    background: #360033;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0b8793, #360033);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #0b8793, #360033); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+ Position: relative => en el contenedor padre (fondo blanco) si en el hijo quiero alinear a la derecha
+ height: vH
+ width: vW
+ */
+.content {
+    background-color: white;
+    border-radius:10px;
+    /* max-width: 960px;
+    max-height: 600px;
+    width: 100%;
+    height: 100%; */
+    height: 80vh;
+    width: 80vw;
+    position: relative;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding: 0.5em;
+    overflow: scroll;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0px;
+}
+
+table th, table td {
+    padding: 1em;
+    text-align: left;
+}
+
+/* 
+ even: pares
+ odd: impar 
+*/
+table tr:nth-child(even) {
+    background-color: #3F9DA6;
+}
+
+table td:nth-of-type(1) {
+    background-color: red;
+}
+
+table th {
+    display: none;
+}
+
+table td {
+    display: block;
+}
+
+.fa-star {
+    color: yellow;
+}
+
+i:hover {
+    color: orangered;
+}
+
+/*
+.inline {
+    display: inline-block;
+}
+*/
+
+.band-img {
+    display: none;
+}
+
+iframe {
+    width: 75vw;
+}
+
+.center {
+    text-align: center;
+}
+
+.underline {
+    border-bottom: solid 5px #360033;
+    padding-bottom: 5px;
+}
+
+.band-info {
+    text-align: justify;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.band-albums {
+    padding-top: 5px;
+}
+
+/*
+ relative ya que es el padre de middle la cual posee un abosolute
+*/
+.album-info {
+    position: relative;
+    width: 150px;
+    margin-bottom: 5px;
+}
+
+.album-info:hover .image {
+    opacity: 0.3;
+}
+  
+.album-info:hover .middle {
+    opacity: 1;
+}
+  
+.image {
+  opacity: 1;
+  display: block;
+  height: 150px;
+  width: 150px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.album-year {
+  background-color: #360033;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.position {
+    background-color: #0b8793;
+    padding: 10px;
+    border-radius:10px;
+    margin-left: 5px;
+}
+
+/* actions no responsive
+.actions {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+*/
+
+.actions {
+    position: sticky;
+    top: 1em;
+    left: 1em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close {
+    height: 40px;
+    width: 40px;
+    background-color: #0b8793;
+    color: white;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.close:hover {
+    background-color: #360033;
+}
+
+a {
+    text-decoration: none;
+}
+
+.linkdetail {
+    color: purple;
+}
+
+.linkdetail:hover {
+    color: orangered;
+}
+
+@media(min-width:600px){
+    table th{
+        display: table-cell;
+    }
+    table td{
+        display: table-cell;
+    }
+    td::nth-of-type(1){
+        font-size: 1em;
+        color: black;
+    }
+    .content{
+        width: 80vw;
+        height: 75vh;
+        padding: 1.8em;
+    }
+    .band-img {
+        display: inline-block;
+    }
+    iframe {
+        height: 220px;
+        width: 350px;
+    }
+    .inline {
+        display: inline-block;
+    }
+    .actions {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+    }
+}
